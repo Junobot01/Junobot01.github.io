@@ -45,10 +45,6 @@ function setup() {
 
 	background(0); // ! TEMPORARY CODE FOR SHOWING CANVAS ! ! TEMPORARY CODE FOR SHOWING CANVAS ! ! TEMPORARY CODE FOR SHOWING CANVAS !
 	
-	/**********************************************************************
-	*****************TEMPORARY CODE FOR BUILDING STEPS*********************
-	**********************************************************************/
-	htmlStuff();
 	
 	background_image.resize(canvas.width, canvas.height*(1-groundHeight));
 
@@ -103,16 +99,3 @@ function mouseClicked() {
 
 }
 
-
-/**********************************************************************
-*****************TEMPORARY CODE FOR BUILDING STEPS*********************
-**********************************************************************/
-function htmlStuff(){
-  
-  createElement("h3", "1. Make Flappy Bird");
-  createElement("h4", "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp a. <s>Background</s>");
-  createElement("h4", "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp b. Bird");
-  createElement("h4", "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp c. Pipes");
-  createElement("h3", "2. Make AI try it");
-
- }
