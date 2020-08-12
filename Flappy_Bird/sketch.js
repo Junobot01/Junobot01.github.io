@@ -80,21 +80,21 @@ function setup() {
 function draw() {
 
 	background(background_image);
-	bird_image = bird_image_list[Math.floor(frame/flapSpeed)%bird_image_list.length];
-	image(bird_image, player.pos.x-bird_image.width/2.0, player.pos.y-bird_image.height/2.0);
 	image(ground_image, ground_anchor-ground_image.width/2.0, canvas.height*(1-groundHeight));
-
+	ground_anchor = (ground_anchor-birdSpeed+canvas.width) % canvas.width;
+	
 	if (gameStart) {
 		player.update();	
 		player.vel.y += gravity;		
 	}
+	bird_image = bird_image_list[Math.floor(frame/flapSpeed)%bird_image_list.length];
+	image(bird_image, player.pos.x-bird_image.width/2.0, player.pos.y-bird_image.height/2.0);
 
-	ground_anchor = (ground_anchor-birdSpeed+canvas.width) % canvas.width;
 	frame++;
 
 }
 
-function mouseClicked() {
+function mousePressed() {
 	
 	player.vel.y = jump;
 	gameStart = true;
