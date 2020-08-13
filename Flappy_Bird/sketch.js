@@ -94,10 +94,12 @@ function draw() {
 
 }
 
-function mousePressed() {
+function mouseClciked() {
 	
 	player.vel.y = jump;
 	gameStart = true;
+
+	return false;
 
 }
 
